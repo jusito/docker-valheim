@@ -1,0 +1,14 @@
+services:
+  valheim:
+    build: .
+    ports:
+      - 2456:2456/udp
+      - 2457:2457/udp
+    environment:
+      SERVER_NAME: "MyValheimServer"
+      SERVER_PASSWORD: "SecurePW"
+    volumes:
+      - valheim_data:/home/steam/serverfiles:rw
+
+volumes:
+  valheim_data:

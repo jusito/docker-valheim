@@ -14,7 +14,7 @@ COPY entrypoint.sh "$STEAM_PATH/entrypoint.sh"
 
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y curl wget file tar bzip2 gzip unzip bsdmainutils python3 cpio util-linux ca-certificates binutils bc jq tmux netcat lib32gcc1 lib32stdc++6 libsdl2-2.0-0:i386 && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y curl wget file tar bzip2 gzip unzip bsdmainutils python3 cpio util-linux ca-certificates binutils bc jq tmux netcat lib32gcc1 lib32stdc++6 libsdl2-2.0-0:i386 libc6-dev && \
     echo steam steam/question select "I AGREE" | debconf-set-selections && \
     echo steam steam/license note '' | debconf-set-selections && \
     apt-get install -y steamcmd && \

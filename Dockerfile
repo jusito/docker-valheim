@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 ENV STEAM_PATH="/home/steam" \
-	SERVER_PATH="/home/steam/serverfiles" \
+	SERVER_PATH="/home/steam/.config" \
 	STEAM_CMD="/home/steam/.steam/steamcmd" \
 	GROUP_ID=10000 \
 	USER_ID=10000 \
